@@ -513,14 +513,18 @@ function submitBooking(){
   var msg     = inputs[5] ? inputs[5].value.trim() : '';
 
   var text =
-    '🌸 *Nouvelle Demande de RDV — Bella Donna*\n\n' +
-    '👤 *Prénom :* ' + nom + '\n' +
-    '📞 *Téléphone :* ' + tel + '\n' +
-    '✂️ *Service :* ' + service + '\n' +
-    '📅 *Date souhaitée :* ' + date + '\n' +
-    '🕐 *Heure souhaitée :* ' + heure +
-    (msg ? '\n💬 *Message :* ' + msg : '') +
-    '\n\n⚠️ _À confirmer par le salon_\n_Envoyé depuis belladonnabeautyhair.com_';
+    '--------------------------\n' +
+    '   BELLA DONNA\n' +
+    '   Nouvelle demande RDV\n' +
+    '--------------------------\n' +
+    'Prenom  : ' + nom + '\n' +
+    'Tel     : ' + tel + '\n' +
+    'Service : ' + service + '\n' +
+    'Date    : ' + date + '\n' +
+    'Heure   : ' + heure +
+    (msg ? '\nNote    : ' + msg : '') +
+    '\n--------------------------\n' +
+    'Merci, j\'attends votre confirmation.';
 
   window.open('https://wa.me/212626613741?text=' + encodeURIComponent(text), '_blank');
 }
