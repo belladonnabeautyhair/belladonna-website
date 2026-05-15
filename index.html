@@ -503,7 +503,25 @@ function showToast(){
   setTimeout(function(){t.classList.remove('show');},2500);
 }
 function submitBooking(){
-  alert('✅ Merci ! Nous vous contacterons très bientôt sur WhatsApp.\nشكراً، سيتم التواصل معكِ قريباً على واتساب!');
+  var inputs = document.querySelectorAll('#booking input, #booking select, #booking textarea');
+  var nom     = inputs[0].value.trim() || 'Non précisé';
+  var tel     = inputs[1].value.trim() || 'Non précisé';
+  var service = document.getElementById('booking-service-select').value || 'Non précisé';
+  var date    = inputs[3].value || 'Non précisé';
+  var heure   = inputs[4].value || 'Non précisé';
+  var msg     = inputs[5] ? inputs[5].value.trim() : '';
+
+  var text =
+    '🌸 *Nouvelle Réservation — Bella Donna*\n\n' +
+    '👤 *Prénom :* ' + nom + '\n' +
+    '📞 *Téléphone :* ' + tel + '\n' +
+    '✂️ *Service :* ' + service + '\n' +
+    '📅 *Date :* ' + date + '\n' +
+    '🕐 *Heure :* ' + heure +
+    (msg ? '\n💬 *Message :* ' + msg : '') +
+    '\n\n_Envoyé depuis belladonnabeautyhair.com_';
+
+  window.open('https://wa.me/212626613741?text=' + encodeURIComponent(text), '_blank');
 }
 function toggleMenu(){
   var nl=document.getElementById('nav-links');
