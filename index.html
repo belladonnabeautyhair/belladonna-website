@@ -421,26 +421,68 @@ footer { background:var(--text); color:rgba(255,255,255,.6); padding:40px; text-
 <script>
 var ADMIN_PASS = "belladonna2025";
 var menuData = [
-  { category:"✂️ Coiffure", nameAr:"صالون الحلاقة", icon:"✂️", desc:"Coupes tendance, colorations et soins capillaires.", items:[
-    {name:"Coupe & Brushing", price:"180 MAD"},
-    {name:"Coloration", price:"à partir de 350 MAD"},
-    {name:"Balayage / Mèches", price:"à partir de 450 MAD"},
-    {name:"Soin Kératine", price:"600 MAD"},
-    {name:"Lissage brésilien", price:"800 MAD"}
+  { category:"✂️ Coiffure", nameAr:"صالون الحلاقة", icon:"✂️", desc:"Coupes tendance, colorations et soins capillaires professionnels.", items:[
+    {name:"Coupe & Brushing", price:"à partir de 120 MAD"},
+    {name:"Coloration", price:"à partir de 250 MAD"},
+    {name:"Coloration sans amoniaque", price:"à partir de 300 MAD"},
+    {name:"Balayage / Mèches", price:"à partir de 250 MAD"},
+    {name:"Balayage / Mèches pour femmes enceintes", price:"à partir de 350 MAD"},
+    {name:"Soin Botox", price:"à partir de 600 MAD"},
+    {name:"Soin Botox capillaire (à la vapeur)", price:"à partir de 120 MAD"},
+    {name:"Soin Filler", price:"à partir de 900 MAD"},
+    {name:"Lifting capillaire", price:"à partir de 180 MAD"},
+    {name:"Soin Laser de vapeur", price:"à partir de 80 MAD"},
+    {name:"Soin Laser de cheveux", price:"200 MAD par séance"},
+    {name:"Soin de cheveux RP", price:"à partir de 120 MAD"},
+    {name:"Pack de soin SALERM 21 + ampoules + Laser", price:"à partir de 290 MAD"},
+    {name:"Soin AMINOPLEX anti-chutes", price:"à partir de 180 MAD"},
+    {name:"Soin KERASTASE", price:"à partir de 450 MAD"},
+    {name:"Lissage brésilien", price:"à partir de 250 MAD"}
   ]},
-  { category:"🌿 Esthétique", nameAr:"معهد التجميل", icon:"🌿", desc:"Soins du visage, épilation et traitements naturels.", items:[
-    {name:"Soin du visage complet", price:"250 MAD"},
-    {name:"Épilation sourcils", price:"30 MAD"},
-    {name:"Épilation jambes", price:"150 MAD"},
-    {name:"Masque hydratant", price:"200 MAD"},
-    {name:"Maquillage occasion", price:"400 MAD"}
+  { category:"🌿 Esthétique", nameAr:"معهد التجميل", icon:"🌿", desc:"Soins du visage, épilation, maquillage et traitements naturels.", items:[
+    {name:"Soin du visage complet", price:"400 MAD"},
+    {name:"Soin Hydrafacial Basic", price:"199 MAD"},
+    {name:"Soin Hydrafacial Beauty", price:"299 MAD"},
+    {name:"Soin Hydrafacial Beauty +", price:"399 MAD"},
+    {name:"Épilation sourcils", price:"20 MAD"},
+    {name:"Épilation duvet (avec fil)", price:"20 MAD"},
+    {name:"Épilation jambes complètes", price:"80 MAD"},
+    {name:"Épilation demi jambes", price:"50 MAD"},
+    {name:"Épilation bras complets", price:"60 MAD"},
+    {name:"Épilation demi bras", price:"30 MAD"},
+    {name:"Épilation Maillot integral", price:"80 MAD"},
+    {name:"Soin Eclat Maillot", price:"150 MAD"},
+    {name:"Épilation aisselles", price:"30 MAD"},
+    {name:"Épilation complète", price:"à partir de 150 MAD"},
+    {name:"Épilation complète BIO", price:"à partir de 190 MAD"},
+    {name:"Makeup du jour", price:"100 MAD"},
+    {name:"Makeup du soir", price:"200 MAD"},
+    {name:"Cils Naturels", price:"50 MAD"},
+    {name:"Cils Cat Eye", price:"100 MAD"},
+    {name:"Cils permanents", price:"300 MAD"},
+    {name:"Sugar Lips (Glaçage)", price:"à partir de 500 MAD"}
   ]},
-  { category:"💅 Nail Spa", nameAr:"سبا الأظافر", icon:"💅", desc:"Manucures, pédicures et nail art parfaits.", items:[
-    {name:"Manucure simple", price:"80 MAD"},
-    {name:"Manucure semi-permanent", price:"150 MAD"},
-    {name:"Pose gel / résine", price:"200 MAD"},
-    {name:"Nail Art (design)", price:"à partir de 250 MAD"},
-    {name:"Pédicure complète", price:"180 MAD"}
+  { category:"💅 Nail Spa", nameAr:"سبا الأظافر", icon:"💅", desc:"Manucures, pédicures et nail art pour des ongles parfaits.", items:[
+    {name:"Manucure simple", price:"40 MAD"},
+    {name:"Manucure japonaise", price:"100 MAD"},
+    {name:"Manucure royale", price:"120 MAD"},
+    {name:"Manucure semi-permanent", price:"à partir de 80 MAD"},
+    {name:"Pédicure complète médicale + paraffine", price:"150 MAD"},
+    {name:"Pédicure simple", price:"120 MAD"},
+    {name:"Pose gel", price:"150 MAD"},
+    {name:"Pose gel + vernis semi permanent", price:"200 MAD"},
+    {name:"Faux ongles + vernis semi permanent", price:"100 MAD"},
+    {name:"BIAB", price:"100 MAD"},
+    {name:"BIAB Capsules", price:"150 MAD"},
+    {name:"BIAB Capsules + vernis semi permanent", price:"200 MAD"},
+    {name:"Permanent Cat Eye 9D", price:"100 MAD"},
+    {name:"Faux ongles + Permanent Cat Eye 9D", price:"150 MAD"},
+    {name:"Gel + Permanent Cat Eye 9D", price:"220 MAD"},
+    {name:"BIAB Capsules + Cat Eye 9D", price:"220 MAD"},
+    {name:"Nail Art (design) or Stickers", price:"10 MAD"},
+    {name:"Dépose GEL", price:"40 MAD"},
+    {name:"Dépose vernis permanent", price:"20 MAD"},
+    {name:"Pose Frensh normale", price:"20 MAD"}
   ]}
 ];
 var hoursData = [
