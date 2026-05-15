@@ -206,7 +206,7 @@ footer { background:var(--text); color:rgba(255,255,255,.6); padding:40px; text-
 
 <!-- FLOATING BUTTONS -->
 <div class="floating-bar">
-  <a class="float-btn btn-whatsapp" href="https://wa.me/212626613741?text=Bonjour%20Bella%20Donna%2C%20je%20voudrais%20prendre%20un%20rendez-vous" target="_blank">
+  <a class="float-btn btn-whatsapp" href="https://wa.me/212626613741?text=Bonjour%20Bella%20Donna%2C%20je%20voudrais%20faire%20une%20demande%20de%20rendez-vous" target="_blank">
     <span>💬</span><span>WhatsApp</span>
   </a>
   <a class="float-btn btn-call" href="tel:+212626613741">
@@ -267,7 +267,7 @@ footer { background:var(--text); color:rgba(255,255,255,.6); padding:40px; text-
     <li><a href="#services">Services</a></li>
     <li><a href="#why">À Propos</a></li>
     <li><a href="#testimonials">Avis</a></li>
-    <li><a href="#booking">Réserver</a></li>
+    <li><a href="#booking">Demande RDV</a></li>
     <li><a href="tel:+212626613741" class="nav-phone">📞 +212 62 661 3741</a></li>
   </ul>
   <button class="nav-hamburger" onclick="toggleMenu()">☰</button>
@@ -283,7 +283,7 @@ footer { background:var(--text); color:rgba(255,255,255,.6); padding:40px; text-
     <p class="hero-tagline-fr">Votre beauté, notre passion — depuis le premier regard</p>
     <p class="hero-tagline-ar">جمالكِ إلهامنا، وعنايتكِ شغفنا</p>
     <div class="hero-buttons">
-      <a href="https://wa.me/212626613741?text=Bonjour%20Bella%20Donna%2C%20je%20voudrais%20prendre%20un%20rendez-vous" target="_blank" class="btn-primary">💬 Réserver sur WhatsApp</a>
+      <a href="https://wa.me/212626613741?text=Bonjour%20Bella%20Donna%2C%20je%20voudrais%20faire%20une%20demande%20de%20rendez-vous" target="_blank" class="btn-primary">💬 Demander un RDV</a>
       <a href="#services" class="btn-outline">Nos Services</a>
     </div>
   </div>
@@ -359,8 +359,8 @@ footer { background:var(--text); color:rgba(255,255,255,.6); padding:40px; text-
 <section id="booking">
   <div class="booking-inner">
     <div class="booking-form fade-in">
-      <div class="form-title">Réserver votre soin</div>
-      <div class="form-title-ar">احجزي موعدكِ الآن</div>
+      <div class="form-title">Demande de rendez-vous</div>
+      <div class="form-title-ar">طلب حجز موعد</div>
       <div class="form-row">
         <div class="form-group"><label>Prénom · الاسم</label><input type="text" placeholder="Votre prénom"></div>
         <div class="form-group"><label>Téléphone · الهاتف</label><input type="tel" placeholder="+212 6XX XXX XXX"></div>
@@ -371,7 +371,8 @@ footer { background:var(--text); color:rgba(255,255,255,.6); padding:40px; text-
         <div class="form-group"><label>Heure</label><select><option>09:00</option><option>10:00</option><option>11:00</option><option>14:00</option><option>15:00</option><option>16:00</option><option>17:00</option><option>18:00</option></select></div>
       </div>
       <div class="form-group"><label>Message (optionnel)</label><textarea placeholder="Des précisions..."></textarea></div>
-      <button class="btn-submit" onclick="submitBooking()">Confirmer le Rendez-vous ·  تأكيد الحجز</button>
+      <button class="btn-submit" onclick="submitBooking()">Envoyer ma demande · إرسال الطلب</button>
+      <p style="font-size:12px;color:var(--text-muted);text-align:center;margin-top:10px;line-height:1.6;">📲 Nous vous confirmerons le rendez-vous par WhatsApp<br><span style="direction:rtl;display:block">سنؤكد لكِ الموعد عبر واتساب</span></p>
     </div>
     <div class="contact-info fade-in">
       <p class="section-label">Contact & Localisation</p>
@@ -512,14 +513,14 @@ function submitBooking(){
   var msg     = inputs[5] ? inputs[5].value.trim() : '';
 
   var text =
-    '🌸 *Nouvelle Réservation — Bella Donna*\n\n' +
+    '🌸 *Nouvelle Demande de RDV — Bella Donna*\n\n' +
     '👤 *Prénom :* ' + nom + '\n' +
     '📞 *Téléphone :* ' + tel + '\n' +
     '✂️ *Service :* ' + service + '\n' +
-    '📅 *Date :* ' + date + '\n' +
-    '🕐 *Heure :* ' + heure +
+    '📅 *Date souhaitée :* ' + date + '\n' +
+    '🕐 *Heure souhaitée :* ' + heure +
     (msg ? '\n💬 *Message :* ' + msg : '') +
-    '\n\n_Envoyé depuis belladonnabeautyhair.com_';
+    '\n\n⚠️ _À confirmer par le salon_\n_Envoyé depuis belladonnabeautyhair.com_';
 
   window.open('https://wa.me/212626613741?text=' + encodeURIComponent(text), '_blank');
 }
