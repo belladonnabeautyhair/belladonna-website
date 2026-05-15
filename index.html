@@ -512,23 +512,15 @@ function submitBooking(){
   var heure   = inputs[4].value || 'Non précisé';
   var msg     = inputs[5] ? inputs[5].value.trim() : '';
 
-  var flower = '\uD83C\uDF38';
-  var person = '\uD83D\uDC64';
-  var phone  = '\uD83D\uDCDE';
-  var scissors = '\u2702\uFE0F';
-  var cal  = '\uD83D\uDCC5';
-  var clock  = '\uD83D\uDD50';
-  var bubble = '\uD83D\uDCAC';
-  var warn   = '\u26A0\uFE0F';
   var text =
-    flower + ' *Nouvelle Demande de RDV \u2014 Bella Donna*\n\n' +
-    person  + ' *Pr\u00e9nom :* ' + nom + '\n' +
-    phone   + ' *T\u00e9l\u00e9phone :* ' + tel + '\n' +
-    scissors+ ' *Service :* ' + service + '\n' +
-    cal     + ' *Date souhait\u00e9e :* ' + date + '\n' +
-    clock   + ' *Heure souhait\u00e9e :* ' + heure +
-    (msg ? '\n' + bubble + ' *Message :* ' + msg : '') +
-    '\n\n' + warn + ' _\u00c0 confirmer par le salon_\n_Envoy\u00e9 depuis belladonnabeautyhair.com_';
+    '🌸 *Nouvelle Demande de RDV — Bella Donna*\n\n' +
+    '👤 *Prénom :* ' + nom + '\n' +
+    '📞 *Téléphone :* ' + tel + '\n' +
+    '✂️ *Service :* ' + service + '\n' +
+    '📅 *Date souhaitée :* ' + date + '\n' +
+    '🕐 *Heure souhaitée :* ' + heure +
+    (msg ? '\n💬 *Message :* ' + msg : '') +
+    '\n\n⚠️ _À confirmer par le salon_\n_Envoyé depuis belladonnabeautyhair.com_';
 
   window.open('https://wa.me/212626613741?text=' + encodeURIComponent(text), '_blank');
 }
